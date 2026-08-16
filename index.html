@@ -49,13 +49,12 @@
       margin: auto;
     }
 
-    /* ================= HEADER ================= */
-
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 7, 11, 0.88);
+      background: rgba(5, 7, 11, 0.9);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
@@ -99,22 +98,20 @@
       padding: 10px 17px;
       border-radius: 8px;
       font-weight: 700;
-      box-shadow: 0 0 22px rgba(47,140,255,.15);
     }
 
     .nav-btn:hover {
       background: var(--blue-bright);
-      transform: translateY(-1px);
     }
 
     .menu {
       display: none;
       font-size: 25px;
       cursor: pointer;
+      color: white;
     }
 
-    /* ================= HERO ================= */
-
+    /* HERO */
     .hero {
       min-height: 88vh;
       display: flex;
@@ -123,18 +120,6 @@
       background:
         radial-gradient(circle at 75% 25%, rgba(47,140,255,.15), transparent 30%),
         radial-gradient(circle at 15% 85%, rgba(47,140,255,.07), transparent 28%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      right: -180px;
-      top: 80px;
-      border: 1px solid rgba(47,140,255,.12);
-      border-radius: 50%;
-      pointer-events: none;
     }
 
     .hero-content {
@@ -185,19 +170,18 @@
       font-weight: 700;
       border: 1px solid var(--border);
       transition: .25s;
+      cursor: pointer;
     }
 
     .btn-primary {
       background: var(--blue);
       color: white;
       border-color: var(--blue);
-      box-shadow: 0 8px 30px rgba(47,140,255,.15);
     }
 
     .btn-primary:hover {
       background: var(--blue-bright);
       transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(47,140,255,.25);
     }
 
     .btn-secondary {
@@ -211,8 +195,7 @@
       transform: translateY(-2px);
     }
 
-    /* ================= SECTIONS ================= */
-
+    /* SECTIONS */
     section {
       padding: 100px 0;
     }
@@ -239,8 +222,7 @@
       margin-bottom: 45px;
     }
 
-    /* ================= SERVICES ================= */
-
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -258,19 +240,18 @@
     .card:hover {
       transform: translateY(-5px);
       border-color: rgba(47,140,255,.55);
-      box-shadow: 0 15px 45px rgba(0,0,0,.25);
     }
 
     .icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
+      width: 46px;
+      height: 46px;
+      border-radius: 11px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: rgba(47,140,255,.1);
       color: var(--blue-bright);
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 20px;
     }
 
@@ -284,8 +265,7 @@
       font-size: 14px;
     }
 
-    /* ================= WHY ================= */
-
+    /* WHY */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -299,6 +279,11 @@
       padding: 25px;
     }
 
+    .why-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
     .why-card strong {
       display: block;
       margin-bottom: 8px;
@@ -309,8 +294,7 @@
       font-size: 14px;
     }
 
-    /* ================= PROCESS ================= */
-
+    /* PROCESS */
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -339,8 +323,7 @@
       font-size: 14px;
     }
 
-    /* ================= WORK ================= */
-
+    /* WORK */
     .work-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -354,8 +337,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      background:
-        linear-gradient(145deg, #111a27, #080b10);
+      background: linear-gradient(145deg, #111a27, #080b10);
       border: 1px solid var(--border);
       transition: .3s;
     }
@@ -379,8 +361,7 @@
       font-size: 14px;
     }
 
-    /* ================= PRICING ================= */
-
+    /* PRICING */
     .pricing {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -393,6 +374,8 @@
       border-radius: 15px;
       padding: 30px;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .price-card.featured {
@@ -443,8 +426,12 @@
       font-weight: bold;
     }
 
-    /* ================= FAQ ================= */
+    .price-card .btn {
+      width: 100%;
+      margin-top: auto;
+    }
 
+    /* FAQ */
     .faq {
       max-width: 820px;
     }
@@ -472,8 +459,7 @@
       font-size: 14px;
     }
 
-    /* ================= CTA ================= */
-
+    /* CTA */
     .cta {
       text-align: center;
       background:
@@ -496,8 +482,7 @@
       margin: 0 auto 28px;
     }
 
-    /* ================= FOOTER ================= */
-
+    /* FOOTER */
     footer {
       padding: 32px 0;
       color: var(--muted);
@@ -518,10 +503,18 @@
       margin-bottom: 4px;
     }
 
-    /* ================= MOBILE ================= */
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
+    .footer-links a:hover {
+      color: var(--blue-bright);
+    }
+
+    /* MOBILE */
     @media (max-width: 850px) {
-
       nav {
         display: none;
       }
@@ -543,7 +536,6 @@
     }
 
     @media (max-width: 600px) {
-
       section {
         padding: 72px 0;
       }
@@ -594,9 +586,7 @@
   <header>
     <div class="container nav">
 
-      <a href="#" class="logo">
-        K<span>TIX</span>
-      </a>
+      <a href="#" class="logo">K<span>TIX</span></a>
 
       <nav>
         <a href="#services">Services</a>
@@ -606,15 +596,13 @@
         <a href="#contact" class="nav-btn">Get Started</a>
       </nav>
 
-      <div class="menu">☰</div>
+      <div class="menu" onclick="toggleMenu()">☰</div>
 
     </div>
   </header>
 
-
   <!-- HERO -->
   <section class="hero">
-
     <div class="container hero-content">
 
       <div class="eyebrow">
@@ -636,7 +624,7 @@
 
         <a
           class="btn btn-primary"
-          href="https://wa.me/918131861802?text=Hello%20KTIX%20Web%20Studio,%20I%20am%20interested%20in%20building%20a%20website."
+          href="https://wa.me/918131861802?text=Hello%20KTIX%20Web%20Studio%2C%20I%20am%20interested%20in%20building%20a%20website."
           target="_blank">
           Get Your Website →
         </a>
@@ -646,15 +634,11 @@
         </a>
 
       </div>
-
     </div>
-
   </section>
-
 
   <!-- SERVICES -->
   <section id="services">
-
     <div class="container">
 
       <div class="section-label">Our Services</div>
@@ -671,7 +655,7 @@
       <div class="services-grid">
 
         <div class="card">
-          <div class="icon">B</div>
+          <div class="icon">💼</div>
           <h3>Business Websites</h3>
           <p>
             Establish a professional online presence with a website
@@ -680,7 +664,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">L</div>
+          <div class="icon">🚀</div>
           <h3>Landing Pages</h3>
           <p>
             Focused pages designed to present your offer
@@ -689,7 +673,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">P</div>
+          <div class="icon">📸</div>
           <h3>Portfolio Websites</h3>
           <p>
             Showcase photography, design, creative projects
@@ -698,7 +682,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">R</div>
+          <div class="icon">🍽️</div>
           <h3>Restaurant Websites</h3>
           <p>
             Present menus, galleries, locations and contact
@@ -707,7 +691,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">W</div>
+          <div class="icon">✨</div>
           <h3>Website Redesign</h3>
           <p>
             Transform an outdated website into a cleaner,
@@ -716,7 +700,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">C</div>
+          <div class="icon">⚙️</div>
           <h3>Custom Websites</h3>
           <p>
             Custom HTML, CSS and JavaScript websites built
@@ -725,15 +709,11 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
-
 
   <!-- WHY -->
   <section>
-
     <div class="container">
 
       <div class="section-label">Why KTIX Web Studio</div>
@@ -752,6 +732,7 @@
       <div class="why-grid">
 
         <div class="why-card">
+          <div class="why-icon">⚡</div>
           <strong>Fast & Lightweight</strong>
           <p>
             Clean websites designed for quick loading
@@ -760,6 +741,7 @@
         </div>
 
         <div class="why-card">
+          <div class="why-icon">📱</div>
           <strong>Mobile First</strong>
           <p>
             Designed to look great on phones,
@@ -768,6 +750,7 @@
         </div>
 
         <div class="why-card">
+          <div class="why-icon">🎯</div>
           <strong>Business Focused</strong>
           <p>
             Every section has a purpose and a
@@ -776,6 +759,7 @@
         </div>
 
         <div class="why-card">
+          <div class="why-icon">🛠️</div>
           <strong>Custom Built</strong>
           <p>
             Websites are tailored to the business
@@ -784,15 +768,11 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
-
 
   <!-- PROCESS -->
   <section>
-
     <div class="container">
 
       <div class="section-label">How It Works</div>
@@ -841,15 +821,11 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
-
 
   <!-- WORK -->
   <section id="work">
-
     <div class="container">
 
       <div class="section-label">Our Work</div>
@@ -889,15 +865,11 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
-
 
   <!-- PRICING -->
   <section id="pricing">
-
     <div class="container">
 
       <div class="section-label">Packages</div>
@@ -933,13 +905,12 @@
 
           <a
             class="btn btn-secondary"
-            href="https://wa.me/918131861802?text=Hello%20KTIX%20Web%20Studio,%20I%20am%20interested%20in%20the%20Starter%20package."
+            href="https://wa.me/918131861802?text=Hello%20KTIX%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Starter%20package."
             target="_blank">
             Choose Starter
           </a>
 
         </div>
-
 
         <!-- PROFESSIONAL -->
         <div class="price-card featured">
@@ -966,4 +937,19 @@
 
           <a
             class="btn btn-primary"
-            href="https://wa.me/918131861802?te
+            href="https://wa.me/918131861802?text=Hello%20KTIX%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Professional%20package%20for%20%E2%82%B93%2C999."
+            target="_blank">
+            Choose Professional
+          </a>
+
+        </div>
+
+        <!-- CUSTOM -->
+        <div class="price-card">
+
+          <h3>Custom</h3>
+          <p>Custom Website</p>
+
+          <div class="price">
+            Let's Talk
+    
