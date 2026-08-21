@@ -64,17 +64,30 @@
     }
 
     .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+    } 
 
     .logo {
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+}
 
     .logo span {
       color: var(--blue);
@@ -553,7 +566,7 @@
     <div class="container nav">
 
       <a href="#" class="logo">
-        <img src="IMG-20260820-WA0434.jpg" width="120" style="border-radius: 8px; display: block;">
+  <img src="IMG-20260820-WA0434.jpg" alt="KTIX Web Studio Logo">
       </a> 
 
       <nav>
